@@ -6,9 +6,12 @@ namespace task5
     {
         static void Main(string[] args)
         {
-            float rubToJpy = 2.28f, rubToUsd = 0.017f;
-            float jpyToRub = 0.44f, jpyToUsd = 0.0073f;
-            float usdToRub = 60.3f, usdToJpy = 137.56f;
+            float rubToJpy = 2.28f;
+            float rubToUsd = 0.017f;
+            float jpyToRub = 0.44f;
+            float jpyToUsd = 0.0073f;
+            float usdToRub = 60.3f;
+            float usdToJpy = 137.56f;
             float balanceRub = 100f;
             float balanceJpy = 100f;
             float balanceUsd = 100f;
@@ -17,7 +20,6 @@ namespace task5
             float currencyToExchange;
 
             Console.WriteLine("Ваш баланс во всех валютах (RUB/JPY/USD) = 100");
-
             Console.Write("Выбор валюты для конвертации (RUB/JPY/USD):\t");
             firstCurrency = Console.ReadLine();
             Console.Write("В какую валюту конвертировать (RUB/JPY/USD):\t");
@@ -26,10 +28,12 @@ namespace task5
             switch (firstCurrency)
             {
                 case "rub":
+
                     if (secondCurrency == "jpy")
                     {
                         Console.Write("RUB to JPY. Рублей к обмену:\t");
                         currencyToExchange = Convert.ToSingle(Console.ReadLine());
+                        
                         if (balanceRub >= currencyToExchange && currencyToExchange > 0f)
                         {
                             balanceRub -= currencyToExchange;
@@ -46,6 +50,7 @@ namespace task5
                     {
                         Console.WriteLine("RUB to USD. Рублей к обмену:\t");
                         currencyToExchange = Convert.ToSingle(Console.ReadLine());
+                        
                         if (balanceRub >= currencyToExchange && currencyToExchange > 0f)
                         {
                             balanceRub -= currencyToExchange;
@@ -65,10 +70,12 @@ namespace task5
                     break;
 
                 case "jpy":
+
                     if (secondCurrency == "rub")
                     {
                         Console.WriteLine("JPY to RUB. Йен к обмену:\t");
                         currencyToExchange = Convert.ToSingle(Console.ReadLine());
+                       
                         if (balanceJpy >= currencyToExchange && currencyToExchange > 0f)
                         {
                             balanceJpy -= currencyToExchange;
@@ -85,6 +92,7 @@ namespace task5
                     {
                         Console.WriteLine("JPY to USD. Йен к обмену:\t");
                         currencyToExchange = Convert.ToSingle(Console.ReadLine());
+                        
                         if (balanceJpy >= currencyToExchange && currencyToExchange > 0f)
                         {
                             balanceJpy -= currencyToExchange;
@@ -104,10 +112,12 @@ namespace task5
                     break;
 
                 case "usd":
+
                     if (secondCurrency == "rub")
                     {
                         Console.WriteLine("USD to RUB. Долларов к обмену:\t");
                         currencyToExchange = Convert.ToSingle(Console.ReadLine());
+                        
                         if (balanceUsd >= currencyToExchange && currencyToExchange > 0f)
                         {
                             balanceUsd -= currencyToExchange;
@@ -124,6 +134,7 @@ namespace task5
                     {
                         Console.WriteLine("USD to JPY. Долларов к обмену:\t");
                         currencyToExchange = Convert.ToSingle(Console.ReadLine());
+                       
                         if (balanceUsd >= currencyToExchange && currencyToExchange > 0f)
                         {
                             balanceUsd -= currencyToExchange;
