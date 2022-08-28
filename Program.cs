@@ -6,6 +6,9 @@ namespace task5
     {
         static void Main(string[] args)
         {
+            const string CaseRub = "rub";
+            const string CaseJpy = "jpy";
+            const string CaseUsd = "usd";
             float rubToJpy = 2.28f;
             float rubToUsd = 0.017f;
             float jpyToRub = 0.44f;
@@ -27,7 +30,7 @@ namespace task5
            
             switch (firstCurrency)
             {
-                case "rub":
+                case CaseRub:
 
                     if (secondCurrency == "jpy")
                     {
@@ -69,7 +72,7 @@ namespace task5
                     }
                     break;
 
-                case "jpy":
+                case CaseJpy:
 
                     if (secondCurrency == "rub")
                     {
@@ -111,7 +114,7 @@ namespace task5
                     }
                     break;
 
-                case "usd":
+                case CaseUsd:
 
                     if (secondCurrency == "rub")
                     {
