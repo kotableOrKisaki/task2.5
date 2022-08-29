@@ -32,7 +32,7 @@ namespace task5
             {
                 case CaseRub:
 
-                    if (secondCurrency == "jpy")
+                    if (secondCurrency == CaseJpy)
                     {
                         Console.Write("RUB to JPY. Рублей к обмену:\t");
                         currencyToExchange = Convert.ToSingle(Console.ReadLine());
@@ -49,7 +49,7 @@ namespace task5
                             Console.WriteLine("Что-то многовато/маловато");
                         }
                     }
-                    else if (secondCurrency == "usd")
+                    else if (secondCurrency == CaseUsd)
                     {
                         Console.WriteLine("RUB to USD. Рублей к обмену:\t");
                         currencyToExchange = Convert.ToSingle(Console.ReadLine());
@@ -74,7 +74,7 @@ namespace task5
 
                 case CaseJpy:
 
-                    if (secondCurrency == "rub")
+                    if (secondCurrency == CaseRub)
                     {
                         Console.WriteLine("JPY to RUB. Йен к обмену:\t");
                         currencyToExchange = Convert.ToSingle(Console.ReadLine());
@@ -91,7 +91,7 @@ namespace task5
                             Console.WriteLine("Что-то многовато/маловато");
                         }
                     }
-                    else if (secondCurrency == "usd")
+                    else if (secondCurrency == CaseUsd)
                     {
                         Console.WriteLine("JPY to USD. Йен к обмену:\t");
                         currencyToExchange = Convert.ToSingle(Console.ReadLine());
@@ -116,7 +116,7 @@ namespace task5
 
                 case CaseUsd:
 
-                    if (secondCurrency == "rub")
+                    if (secondCurrency == CaseRub)
                     {
                         Console.WriteLine("USD to RUB. Долларов к обмену:\t");
                         currencyToExchange = Convert.ToSingle(Console.ReadLine());
@@ -133,7 +133,7 @@ namespace task5
                             Console.WriteLine("Что-то многовато/маловато");
                         }
                     }
-                    else if (secondCurrency == "jpy")
+                    else if (secondCurrency == CaseJpy)
                     {
                         Console.WriteLine("USD to JPY. Долларов к обмену:\t");
                         currencyToExchange = Convert.ToSingle(Console.ReadLine());
